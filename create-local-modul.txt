@@ -1,0 +1,38 @@
+Creating a Local Module
+To create a local module, follow these steps:
+
+1. Create a New File
+Create a new file in your project directory. For example, create a file named greet.js:
+
+// logger.js
+function log(message) {
+  console.log(`Luffy Log : ${message}`);
+}
+
+module.exports = log;
+In this file, we define a function log and export it using module.exports. This allows other files to import and use the greet function.
+
+2. Import and Use the Module
+In another file, such as app.js, you can import and use the log module:
+
+// app.js
+const log = require('./logger');
+
+log('Hello world!'); // Luffy Log : Hello world!
+Here, we use require to import the logger function from logger.js and then call it.
+
+Using Core Modules
+Node.js provides several built-in modules that you can use without needing to install them. Here’s an example of using the fs (file system) module to read a file:
+
+// readFile.js
+const fs = require('fs');
+const log = require('./logger');
+
+fs.readFile('poneglyph.txt', 'utf8', (err, data) => {
+  if (err) {
+    log(err);
+    return;
+  }
+  log(data);
+});
+In this poneglyph, we import the fs module and use it to read the contents of poneglyph.txt.

@@ -1,0 +1,21 @@
+Installing and Using Third-Party Modules
+
+To use third-party modules, you first need to install them using npm. Here’s how:
+
+1. Install a Module
+For example, to install the lodash module, run:
+
+npm install lodash
+
+2. Import and Use the Module
+After installing, you can use it in your code:
+
+// useLodash.js
+const _ = require('lodash');
+const log = require('./logger');
+
+const numbers = [1, 2, 3, 4, 5];
+const shuffled = _.shuffle(numbers);
+
+log(shuffled);
+In this example, we import lodash using require and use its shuffle function to shuffle an array of numbers.
